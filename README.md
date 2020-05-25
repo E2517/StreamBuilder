@@ -1,16 +1,16 @@
 # streambuilder
 
-A new Flutter project.
+Stream Builder. Check ConnectionState is not working
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Tanto StreamBuilder como FutureBuilder tienen el mismo comportamiento: escuchan los cambios en sus respectivos objetos. Y desencadenar una nueva compilación cuando se les notifica un nuevo valor.
 
-A few resources to get you started if this is your first Flutter project:
+Future son como Promise en JS. Son la representación de una solicitud asincrónica. Futures tiene una y solo una respuesta. Un uso común de Future es manejar llamadas http. Lo que puedes escuchar en un Future es su estado. Ya sea que haya terminado, haya terminado con éxito o haya tenido un error. Pero eso es todo.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Un Future no puede escuchar un cambio de variable. Es una respuesta única. En su lugar, deberá usar un Stream.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Stream por otro lado son como asíncronos Iterator en JS. Esto puede asimilarse a un valor que puede cambiar con el tiempo. Por lo general, es la representación de sockets web o eventos (como un clic). Al escuchar un Stream obtendrá cada nuevo valor y también si el Stream tuvo un error o se completó.
+
+- [StreamBuilder](https://www.youtube.com/watch?v=MkKEWHfy99Y)
+
